@@ -11,16 +11,22 @@ class Die:
         
 def checkSnakeEyes(x, y) :
     if (x == 1 and y == 1) :
-        return True
+        return "Snake Eyes!"
     else :
-        return False
+        return
         
 def checkCraps(x, y) :
     dice_sum = x + y
     if (dice_sum == 2 or dice_sum == 3 or dice_sum == 12) :
-        return True
+        return "Crapped out!"
     else :
-        return False
+        return
+        
+def checkBoxCars(x,y) :
+    if (x == 6 and y == 6) :
+        return "Box Cars!"
+    else :
+        return
         
 
 def main(args):
@@ -39,10 +45,9 @@ def main(args):
         print(str(result_1))
         print(str(result_2))
         
-        if (checkSnakeEyes(result_1, result_2)) :
-            print("Snake Eyes!")
-        if (checkCraps(result_1, result_2)) :
-            print("Crapped out!")
+        print(checkSnakeEyes(result_1, result_2))
+        print(checkCraps(result_1, result_2))
+        print(checkBoxCars(result_1, result_2))
         
         cont = input("Roll again? (y/n)")
 
