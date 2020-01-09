@@ -15,6 +15,13 @@ def checkSnakeEyes(x, y) :
     else :
         return False
         
+def checkCraps(x, y) :
+    dice_sum = x + y
+    if (dice_sum == 2 or dice_sum == 3 or dice_sum == 12) :
+        return True
+    else :
+        return False
+        
 
 def main(args):
     print("Welcome to Krieg's Casino!")
@@ -34,6 +41,8 @@ def main(args):
         
         if (checkSnakeEyes(result_1, result_2)) :
             print("Snake Eyes!")
+        if (checkCraps(result_1, result_2)) :
+            print("Crapped out!")
         
         cont = input("Roll again? (y/n)")
 
