@@ -9,6 +9,12 @@ class Die:
     def roll(self):
         return random.randint(1, self.sides)
         
+def checkSnakeEyes(x, y) :
+    if (x == 1 and y == 1) :
+        return True
+    else :
+        return False
+        
 
 def main(args):
     print("Welcome to Krieg's Casino!")
@@ -21,8 +27,14 @@ def main(args):
     while (cont == "y") :
         counter += 1
         print("Roll " + str(counter) + ": ")
-        print(die_1.roll())
-        print(die_2.roll())
+        result_1 = die_1.roll()
+        result_2 = die_2.roll()
+        print(str(result_1))
+        print(str(result_2))
+        
+        if (checkSnakeEyes(result_1, result_2)) :
+            print("Snake Eyes!")
+        
         cont = input("Roll again? (y/n)")
 
 if __name__ == '__main__':
