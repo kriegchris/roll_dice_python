@@ -45,9 +45,12 @@ def main(args):
         print(str(result_1))
         print(str(result_2))
         
-        print(checkSnakeEyes(result_1, result_2))
-        print(checkCraps(result_1, result_2))
-        print(checkBoxCars(result_1, result_2))
+        if (checkSnakeEyes(result_1, result_2) is not None) :
+            print(checkSnakeEyes(result_1, result_2))
+        if (checkCraps(result_1, result_2) is not None) :
+            print(checkCraps(result_1, result_2))
+        if (checkBoxCars(result_1, result_2) is not None) :
+            print(checkBoxCars(result_1, result_2))
         
         cont = input("Roll again? (y/n)")
 
